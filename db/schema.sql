@@ -1,0 +1,3 @@
+CREATE TABLE orders (id UUID PRIMARY KEY DEFAULT gen_random_uuid(), email VARCHAR(255) NOT NULL, product VARCHAR(255) NOT NULL, amount_ngn INTEGER NOT NULL, status VARCHAR(50) DEFAULT 'pending', payment_reference VARCHAR(255), created_at TIMESTAMP DEFAULT NOW(), updated_at TIMESTAMP DEFAULT NOW());
+
+CREATE TABLE users (id UUID PRIMARY KEY DEFAULT gen_random_uuid(), email VARCHAR(255) UNIQUE NOT NULL, created_at TIMESTAMP DEFAULT NOW());
